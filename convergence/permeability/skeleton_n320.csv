@@ -1,0 +1,2 @@
+case,resolution,steps,tau,force_z,subsamples,geometry_workers,source_dump,particle_filter,n_particles,porosity_psc,mean_uz_fluid,superficial_uz,max_uz,permeability_lu,K_over_skeleton_same_resolution,momentum_residual
+skeleton,320,360,0.72,2e-07,2,12,/data1/wangjian/lbm-imb-dem-couple-storage/data/production/3d_pebble_bed/local_windows/strong_force_chain/fines_packed_slug_900_traj_9900.dump,type==1,1099,0.3018771667480469,4.4036513562509174e-06,1.3293617947712208e-06,2.3101789871161544e-05,0.48743265808278086,,8.881797730100033e-15

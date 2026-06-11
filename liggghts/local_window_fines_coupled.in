@@ -1,0 +1,40 @@
+# Local 3-D strong-force-chain window for library-mode LBM-DEM force coupling.
+atom_style granular
+atom_modify map array
+atom_modify sort 0 0.0
+boundary f f f
+newton off
+communicate single vel yes
+units si
+
+read_data data/production/3d_pebble_bed/local_windows/strong_force_chain/window_with_fines_packed_slug_900.data
+
+group skeleton type 1
+group fines type 2
+
+neighbor 0.00020 bin
+neigh_modify delay 0 every 1 check yes
+
+fix m1 all property/global youngsModulus peratomtype 5.0e7 5.0e7
+fix m2 all property/global poissonsRatio peratomtype 0.25 0.25
+fix m3 all property/global coefficientRestitution peratomtypepair 2 0.35 0.30 0.30 0.25
+fix m4 all property/global coefficientFriction peratomtypepair 2 0.45 0.55 0.55 0.65
+
+pair_style gran model hertz tangential history
+pair_coeff * *
+timestep 5.0e-8
+
+fix hold skeleton freeze
+fix movefines fines nve/sphere
+fix lb all couple/lb/onetoone
+
+compute contacts all contact/atom
+compute cpgl all pair/gran/local id force force_normal force_tangential torque delta contactPoint
+thermo 100
+thermo_style custom step atoms ke
+thermo_modify lost ignore norm no
+
+dump traj all custom 100 data/production/3d_pebble_bed/local_windows/strong_force_chain/coupled_traj_*.dump id type x y z vx vy vz fx fy fz radius c_contacts
+dump dlocal all local 100 data/production/3d_pebble_bed/local_windows/strong_force_chain/coupled_contact_*.local c_cpgl[1] c_cpgl[2] c_cpgl[3] c_cpgl[4] c_cpgl[5] c_cpgl[6] c_cpgl[7] c_cpgl[8] c_cpgl[9] c_cpgl[10] c_cpgl[11] c_cpgl[12] c_cpgl[13] c_cpgl[14] c_cpgl[15] c_cpgl[16] c_cpgl[17] c_cpgl[18] c_cpgl[19]
+
+run 0

@@ -1,0 +1,4 @@
+graph,instant_edges,progressive_edges,intersection,union,jaccard
+fine_fine,255,266,180,341,0.5278592375366569
+fine_skeleton,1413,1288,995,1706,0.5832356389214537
+fine_involving,1668,1554,1175,2047,0.5740107474352711

@@ -1,0 +1,2 @@
+case,resolution,steps,tau,force_z,subsamples,source_dump,particle_filter,n_particles,porosity_psc,mean_uz_fluid,superficial_uz,max_uz,permeability_lu,K_over_skeleton_same_resolution,momentum_residual
+packed_slug,192,360,0.72,2e-07,2,/home/wangjian/lbm-imb-dem-couple/data/production/3d_pebble_bed/local_windows/strong_force_chain/fines_packed_slug_900_traj_9900.dump,all,1853,0.2935146579036006,1.3982411680790716e-06,4.104042781154596e-07,7.584686059538255e-06,0.15048156864233517,,6.661365476105192e-16

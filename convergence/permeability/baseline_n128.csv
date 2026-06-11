@@ -1,0 +1,2 @@
+case,resolution,steps,tau,force_z,subsamples,source_dump,particle_filter,n_particles,porosity_psc,mean_uz_fluid,superficial_uz,max_uz,permeability_lu,momentum_residual
+baseline,128,360,0.72,2e-07,2,/Users/wangjian-macbook13/Documents/lbm-ibm-dem couple/data/production/3d_pebble_bed/local_windows/strong_force_chain/fines_traj_900.dump,all,1359,0.2989005446434021,7.672441533337754e-07,2.2932969530593137e-07,3.4177247221559976e-06,0.08408755494550815,2.219048502422303e-19

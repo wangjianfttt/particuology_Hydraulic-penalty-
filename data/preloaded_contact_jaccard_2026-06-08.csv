@@ -1,0 +1,4 @@
+case_a,case_b,fine_fine_jaccard,fine_fine_intersection,fine_fine_union,fine_skeleton_jaccard,fine_skeleton_intersection,fine_skeleton_union,fine_involving_jaccard,fine_involving_intersection,fine_involving_union
+E1p00e09,E1p00e10,0.98828125,253,256,0.9964664310954063,1410,1415,0.995212447636146,1663,1671
+E1p00e09,E9p00e10,0.98828125,253,256,0.9950564971751412,1409,1416,0.9940191387559809,1662,1672
+E1p00e10,E9p00e10,0.9921875,254,256,0.9971731448763251,1411,1415,0.9964093357271095,1665,1671
